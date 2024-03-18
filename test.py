@@ -11,7 +11,7 @@ def test_init():
 def test_init_second_time():
     db.connect()
     init()
-    assert exists(database.db")
+    assert exists("database.db")
     db.close()
 
 def test_show_empty():
