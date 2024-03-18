@@ -1,33 +1,43 @@
 from peewee import *
 
-# Создание подключения к БД SQLite
-db = SqliteDatabase('database.db')
+# Определение имени БД
+database = 'database.db'
 
+# Определение подключения к БД
+db = SqliteDatabase(database)
 # Определение моделей
 class BaseModel(Model):
     class Meta:
         database = db
 
-class Client(BaseModel):
+class Clients(BaseModel):
     name = CharField()
     city = CharField()
     address = CharField()
 
-class Order(BaseModel):
-    client = ForeignKeyField(Client, backref='orders')
+class Orders(BaseModel):
+    client = ForeignKeyField(Clients, backref='orders')
     date = DateField()
     amount = DecimalField(max_digits=10, decimal_places=2)
     description = TextField()
-
+# Определение функции для очистки таблиц
+def clear_tables():
+        db.connect(reuse_if_open=True)
+        False
+        Clients.delete().execute()
+        Orders.delete().execute()
+        #db.close()
 # Функция для создания базы данных
 def initialize_database():
-    db.connect()
-    db.create_tables([Client, Order])
-    db.close()
+    db.connect(reuse_if_open=True)
+    False
+    db.create_tables([Clients, Orders])
+    #db.close()
 
 # Функция для заполнения тестовыми данными
 def fill_database():
-  clients_data = [
+
+    clients_data = [
         {"name": "Rosa McBride", "city": "Brest", "address": "352 Main St"},
         {"name": "Bernice Young", "city": "Krakow", "address": "345 Elm St"},
         {"name": "Bob Johnson", "city": "Mexico", "address": "544 Oak St"},
@@ -40,7 +50,8 @@ def fill_database():
         {"name": "Olga Mills", "city": "Tokyo", "address": "856 Walnut St"}
     ]
 
-      orders_data = [
+
+    orders_data = [
         {"client": 1, "date": "2024-03-01", "amount": 90.80, "description": "Order 1 for Rosa McBride"},
         {"client": 2, "date": "2024-03-02", "amount": 140.75, "description": "Order 1 for Bernice Young"},
         {"client": 3, "date": "2024-03-03", "amount": 2700.25, "description": "Order 1 for Bob Johnson"},
@@ -53,33 +64,36 @@ def fill_database():
         {"client": 10, "date": "2024-03-10", "amount": 155.35, "description": "Order 1 for Olga Mills"}
     ]
 
-    db.connect()
-    for client_data in clients_data:
-        Client.create(**client_data)
+    with db:
+        for client_data in clients_data:
+            Clients.create(**client_data)
 
-    for order_data in orders_data:
-        Order.create(**order_data)
-    db.close()
+        for order_data in orders_data:
+            Orders.create(**order_data)
+    clear_tables()
+
 
 # Функция для отображения содержимого таблицы
 def show_table(table_name):
-    db.connect()
+    db.connect(reuse_if_open=True)
+    False
     if table_name == "CLIENTS":
-        for client in Client.select():
+        for client in Clients.select():
             print(f"{client.name}\t{client.city}\t{client.address}")
     elif table_name == "ORDERS":
-        for order in Order.select():
+        for order in Orders.select():
             print(f"{order.client}\t{order.date}\t{order.amount}\t{order.description}")
-    db.close()
+    #db.close()
 
 import sys
 
 # Распределение действий в зависимости от переданных параметров
 if len(sys.argv) == 1:
     print("Usage:")
-    print(" init - to create the database")
-    print(" fill - to fill the database with test data")
-    print(" show [table_name] - to show the content of the specified table")
+    print(" init -  создает базу данных")
+    print(" fill - заполняет базу данных тестовыми данными")
+    print(" show [table_name] - отображает содержимое указанной таблицы.")
+
 
 elif len(sys.argv) > 1:
     if sys.argv[1] == "init":
