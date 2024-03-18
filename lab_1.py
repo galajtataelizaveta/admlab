@@ -5,9 +5,9 @@ db = SqliteDatabase("database.db")
 
 
 class CLIENTS(Model):
-    NAME = CharField()
-    CITY = CharField()
-    ADDRESS = CharField()
+    name = CharField()
+    city = CharField()
+    address = CharField()
 
     class Meta:
         database = db
@@ -15,10 +15,10 @@ class CLIENTS(Model):
 
 
 class ORDERS(Model):
-    CLIENT = ForeignKeyField(CLIENTS)
-    DATE = DateField()
-    AMOUNT = IntegerField()
-    DESCRIPTION = CharField()
+    client = ForeignKeyField(CLIENTS)
+    date = DateField()
+    amount = IntegerField()
+    description = CharField()
 
     class Meta:
         database = db
