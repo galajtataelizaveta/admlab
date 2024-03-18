@@ -1,7 +1,7 @@
 from peewee import *    
 import argparse
 
-db = SqliteDatabase("база1.db")
+db = SqliteDatabase("database.db")
 
 
 class CLIENTS(Model):
