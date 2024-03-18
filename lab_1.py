@@ -27,30 +27,30 @@ def initialize_database():
 
 # Функция для заполнения тестовыми данными
 def fill_database():
-    clients_data = [
-        {"name": "John Doe", "city": "New York", "address": "123 Main St"},
-        {"name": "Alice Smith", "city": "Los Angeles", "address": "456 Elm St"},
-        {"name": "Bob Johnson", "city": "Chicago", "address": "789 Oak St"},
-        {"name": "Emma Davis", "city": "San Francisco", "address": "101 Pine St"},
-        {"name": "Michael Wilson", "city": "Seattle", "address": "222 Maple St"},
-        {"name": "Sophia Brown", "city": "Miami", "address": "333 Palm St"},
-        {"name": "David Martinez", "city": "Dallas", "address": "444 Cedar St"},
-        {"name": "Olivia Rodriguez", "city": "Boston", "address": "555 Spruce St"},
-        {"name": "William Lee", "city": "Denver", "address": "666 Birch St"},
-        {"name": "Ava Gonzalez", "city": "Phoenix", "address": "777 Walnut St"}
+  clients_data = [
+        {"name": "Rosa McBride", "city": "Brest", "address": "352 Main St"},
+        {"name": "Bernice Young", "city": "Krakow", "address": "345 Elm St"},
+        {"name": "Bob Johnson", "city": "Mexico", "address": "544 Oak St"},
+        {"name": "Jerry Haynes", "city": "San Francisco", "address": "234 Pine St"},
+        {"name": "Willie Lyons", "city": "New York", "address": "86 Maple St"},
+        {"name": "Sharon Baker", "city": "Seoul", "address": "12 Palm St"},
+        {"name": "Marie Stanley", "city": "Toronto", "address": "242 Cedar St"},
+        {"name": "Carol Lopez", "city": "Boston", "address": "54 Spruce St"},
+        {"name": "Johnny Kelly", "city": "Prague", "address": "346 Birch St"},
+        {"name": "Olga Mills", "city": "Tokyo", "address": "856 Walnut St"}
     ]
 
-    orders_data = [
-        {"client": 1, "date": "2024-02-18", "amount": 100.50, "description": "Order 1 for John Doe"},
-        {"client": 2, "date": "2024-02-18", "amount": 200.75, "description": "Order 1 for Alice Smith"},
-        {"client": 3, "date": "2024-02-19", "amount": 150.25, "description": "Order 1 for Bob Johnson"},
-        {"client": 4, "date": "2024-02-19", "amount": 75.50, "description": "Order 1 for Emma Davis"},
-        {"client": 5, "date": "2024-02-20", "amount": 120.00, "description": "Order 1 for Michael Wilson"},
-        {"client": 6, "date": "2024-02-20", "amount": 180.60, "description": "Order 1 for Sophia Brown"},
-        {"client": 7, "date": "2024-02-21", "amount": 90.75, "description": "Order 1 for David Martinez"},
-        {"client": 8, "date": "2024-02-21", "amount": 250.00, "description": "Order 1 for Olivia Rodriguez"},
-        {"client": 9, "date": "2024-02-22", "amount": 300.30, "description": "Order 1 for William Lee"},
-        {"client": 10, "date": "2024-02-22", "amount": 175.25, "description": "Order 1 for Ava Gonzalez"}
+      orders_data = [
+        {"client": 1, "date": "2024-03-01", "amount": 90.80, "description": "Order 1 for Rosa McBride"},
+        {"client": 2, "date": "2024-03-02", "amount": 140.75, "description": "Order 1 for Bernice Young"},
+        {"client": 3, "date": "2024-03-03", "amount": 2700.25, "description": "Order 1 for Bob Johnson"},
+        {"client": 4, "date": "2024-03-04", "amount": 95.40, "description": "Order 1 for Jerry Haynes"},
+        {"client": 5, "date": "2024-03-05", "amount": 320.00, "description": "Order 1 for Willie Lyons"},
+        {"client": 6, "date": "2024-03-06", "amount": 180.80, "description": "Order 1 for Sharon Baker"},
+        {"client": 7, "date": "2024-03-07", "amount": 180.35, "description": "Order 1 for Marie Stanley"},
+        {"client": 8, "date": "2024-03-08", "amount": 280.00, "description": "Order 1 for Carol Lopez"},
+        {"client": 9, "date": "2024-03-09", "amount": 30.50, "description": "Order 1 for Johnny Kelly"},
+        {"client": 10, "date": "2024-03-10", "amount": 155.35, "description": "Order 1 for Olga Mills"}
     ]
 
     db.connect()
