@@ -104,4 +104,4 @@ elif len(sys.argv) > 1:
         if len(sys.argv) == 3:
             show_table(sys.argv[2])
         else:
-            print("Please provide table name to show its contents.")
+            print("Please provide table name to show its contents")
