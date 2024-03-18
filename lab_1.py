@@ -25,7 +25,7 @@ class ORDERS(Model):
         table_name = "Orders"
 
 
-clients_data =   clients_data = [
+clients_data = [
         {"name": "Rosa McBride", "city": "Brest", "address": "352 Main St"},
         {"name": "Bernice Young", "city": "Krakow", "address": "345 Elm St"},
         {"name": "Bob Johnson", "city": "Mexico", "address": "544 Oak St"},
