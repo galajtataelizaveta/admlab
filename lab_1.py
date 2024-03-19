@@ -26,7 +26,7 @@ class ORDERS(Model):
 
 
 clients_data = [
-        {"name": "Rosa McBride", "city": "Brest", "address": "352 Main St"},
+        {"name": "Rosa McBride", "city": "Brest1", "address": "352 Main St"},
         {"name": "Bernice Young", "city": "Krakow", "address": "345 Elm St"},
         {"name": "Bob Johnson", "city": "Mexico", "address": "544 Oak St"},
         {"name": "Jerry Haynes", "city": "San Francisco", "address": "234 Pine St"},
