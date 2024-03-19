@@ -7,7 +7,6 @@ pipeline {
 	stage("Install Libraries") {
 		steps {
 			sh 'pip3 install -r requirements.txt'
-			pip install pytest
 		}
 	}
 	stage("Start Pytest") {
