@@ -1,3 +1,4 @@
+import pytest
 from lab_1 import init, fill, show, db, ORDERS, CLIENTS
 from peewee import *
 from os.path import exists
