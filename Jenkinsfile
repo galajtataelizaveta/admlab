@@ -21,8 +21,8 @@ pipeline {
 	        }
 		stage("Start lab_1 program") {
 	     		steps {
+				sh 'python3 lab_1.py init'
 				sh 'python3 lab_1.py start'
-				sh 'python lab_1.py init'
                 		echo 'Lab_1 program is ready'
             		}
 		}
