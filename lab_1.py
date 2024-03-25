@@ -30,7 +30,7 @@ clients_data = [
         {"name": "Bernice Young", "city": "Krakow", "address": "345 Elm St"},
         {"name": "Bob Johnson", "city": "Mexico", "address": "544 Oak St"},
         {"name": "Jerry Haynes", "city": "San Francisco", "address": "234 Pine St"},
-        {"name": "Willie Lyons", "city": "New York", "address": "86 Maple St"},
+        {"name": "Willie Lyons", "city": "New York2", "address": "86 Maple St"},
         {"name": "Sharon Baker", "city": "Seoul", "address": "12 Palm St"},
         {"name": "Marie Stanley", "city": "Toronto", "address": "242 Cedar St"},
         {"name": "Carol Lopez", "city": "Boston", "address": "54 Spruce St"},
