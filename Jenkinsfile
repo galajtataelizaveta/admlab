@@ -19,7 +19,12 @@ pipeline {
 				echo 'Pytest is ready'
 	            	}
 	        }
-		
+		stage("Start main program") {
+	     		steps {
+				sh 'python3 lab_1.py start'
+                		echo 'Main program is ready'
+            		}
+		}
 	}
     }
 }
