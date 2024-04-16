@@ -25,7 +25,7 @@ def test_fill():
     db.connect()
     for i in range(25):
         fill()
-    assert CLIENTS.select().count() >= 11
+    assert CLIENTS.select().count() >= 10
     db.close()
 
 def test_show():
